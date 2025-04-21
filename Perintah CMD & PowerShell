@@ -1,0 +1,105 @@
+# 💻 CMD & PowerShell Cheat Sheet
+
+## 📁 Navigasi Folder
+| Perintah | Keterangan |
+|---------|------------|
+| `cd C:\path\<folder>` | Masuk ke direktori tujuan |
+| `cd ..` | Naik satu level direktori |
+| `ls` / `dir` | Menampilkan isi direktori |
+| `ls -l` | Menampilkan isi direktori dengan detail (PowerShell) |
+
+---
+
+## 🗂️ Manipulasi Direktori
+| Perintah | Keterangan |
+|---------|------------|
+| `mkdir C:\path\<folder>` | Membuat direktori baru |
+| `rmdir C:\path\<folder>` | Menghapus direktori kosong |
+| `rm C:\path\<folder> -Recurse -Force` | Menghapus direktori beserta isinya |
+
+---
+
+## 📄 Manipulasi File
+| Perintah | Keterangan |
+|---------|------------|
+| `cp C:\path\asal\file.ext C:\path\tujuan\` | Menyalin file |
+| `mv C:\path\asal\file.ext C:\path\tujuan\` | Memindahkan file |
+| `del C:\path\file.ext` | Menghapus file (CMD) |
+| `rm C:\path\file.ext` | Menghapus file (PowerShell) |
+| `ren C:\path\lama.ext baru.ext` | Mengganti nama file |
+
+---
+
+## 📝 Membuat & Mengedit File
+| Perintah | Keterangan |
+|---------|------------|
+| `echo teks > file.txt` | Membuat file baru berisi teks (overwrite jika sudah ada) |
+| `echo teks >> file.txt` | Menambahkan teks ke file (append) |
+| `type nul > file.txt` | Membuat file kosong (CMD) |
+| `New-Item -Path . -Name "file.txt" -ItemType "File"` | Membuat file kosong (PowerShell) |
+| `notepad file.txt` | Membuka file di Notepad |
+| `Set-Content file.txt "teks"` | Menulis isi file (PowerShell) |
+| `Add-Content file.txt "teks tambahan"` | Menambahkan teks ke file (PowerShell) |
+| `Get-Content file.txt` | Menampilkan isi file (PowerShell) |
+| `type file.txt` | Menampilkan isi file (CMD) |
+
+📌 *Gunakan tanda `>` untuk overwrite dan `>>` untuk append (menambahkan) konten di CMD/PowerShell.*
+
+---
+
+## 🌐 Jaringan
+| Perintah | Keterangan |
+|---------|------------|
+| `ipconfig` | Menampilkan konfigurasi IP dasar |
+| `ipconfig /all` | Menampilkan IP lengkap dan DNS |
+| `ping <alamat>` | Mengecek koneksi ke host |
+| `tracert <alamat>` | Menelusuri rute ke host |
+| `netstat -an` | Menampilkan port yang terbuka |
+| `nslookup <domain>` | Mengetahui IP dari domain |
+| `arp -a` | Melihat cache ARP lokal |
+| `netsh wlan show profile` | Menampilkan profil WiFi |
+| `netsh wlan show profile name="nama" key=clear` | Lihat password WiFi tersimpan |
+
+---
+
+## 🧠 Informasi Sistem
+| Perintah | Keterangan |
+|---------|------------|
+| `systeminfo` | Informasi lengkap sistem |
+| `hostname` | Nama komputer |
+| `whoami` | User yang sedang login |
+| `tasklist` | Daftar proses yang berjalan |
+| `taskkill /PID <id> /F` | Menghentikan proses paksa |
+
+---
+
+## 👥 User & Grup
+| Perintah | Keterangan |
+|---------|------------|
+| `net user` | Melihat user lokal |
+| `net user <nama> <pass> /add` | Menambah user |
+| `net localgroup` | Menampilkan grup lokal |
+| `net localgroup administrators <user> /add` | Tambah user ke grup admin |
+
+---
+
+## 🔐 Akses File & Permission
+| Perintah | Keterangan |
+|---------|------------|
+| `icacls <path>` | Menampilkan atau ubah permission |
+| `takeown /F <path>` | Ambil kepemilikan file/folder |
+| `get-acl <path>` | Lihat hak akses (PowerShell) |
+
+---
+
+## 🛠️ Utilitas Tambahan
+| Perintah | Keterangan |
+|---------|------------|
+| `cls` | Membersihkan layar |
+| `echo <text>` | Menampilkan teks |
+| `start <aplikasi/file>` | Membuka aplikasi atau file |
+| `exit` | Keluar dari CMD atau PowerShell |
+| `tree` | Menampilkan struktur folder |
+| `Get-Help <cmdlet>` | Bantuan PowerShell |
+
+---
