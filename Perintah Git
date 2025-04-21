@@ -1,0 +1,72 @@
+# 🧠 Git Cheat Sheet
+
+## 📌 Dasar
+| Perintah | Keterangan |
+|---------|------------|
+| `git init` | Membuat repository Git baru |
+| `git clone <url>` | Mengkloning repository dari URL |
+| `git add <file>` | Menambahkan file ke staging area |
+| `git add .` | Menambahkan semua perubahan ke staging |
+| `git commit -m "pesan"` | Commit dengan pesan |
+| `git commit -am "pesan"` | Add dan commit sekaligus |
+| `git status` | Cek status perubahan |
+| `git log` | Lihat riwayat commit |
+| `git checkout <hash>` | Kembali ke commit sebelumnya |
+
+---
+
+## 🌿 Branching
+| Perintah | Keterangan |
+|---------|------------|
+| `git branch` | Melihat daftar branch |
+| `git branch <nama>` | Membuat branch baru |
+| `git branch -d <nama>` | Hapus branch yang sudah di-merge |
+| `git branch -D <nama>` | Paksa hapus branch belum merge |
+| `git branch --merged` | Tampilkan branch yang sudah digabung |
+| `git checkout <branch>` | Berpindah ke branch |
+| `git merge <branch>` | Menggabungkan branch ke saat ini |
+| `git merge <remote>/<branch>` | Merge branch dari remote |
+
+---
+
+## 🌐 Remote Repository
+| Perintah | Keterangan |
+|---------|------------|
+| `git remote add <nama> <url>` | Tambahkan remote repository |
+| `git remote -v` | Lihat daftar remote |
+| `git fetch <remote>` | Ambil update tanpa merge |
+| `git pull <remote> <branch>` | Ambil dan merge dari remote |
+| `git push <remote> <branch>` | Kirim commit ke remote |
+| `git push -u <remote> <branch>` | Push dan set upstream |
+| `git push <remote> --delete <branch>` | Hapus branch remote |
+| `git push origin master --force` | Force push ke master |
+
+---
+
+## 🧰 Lanjutan & Utilities
+| Perintah | Keterangan |
+|---------|------------|
+| `git stash` | Simpan sementara perubahan |
+| `git rebase <branch>` | Rebase branch saat ini ke branch lain |
+| `git rebase -i HEAD~11` | Interaktif rebase commit terakhir |
+| `git reset` | Reset staging area dan working dir |
+| `git reset --hard HEAD~1` | Hapus commit terakhir (⚠️ butuh force push) |
+| `git config` | Konfigurasi Git (user, email, dll) |
+
+---
+
+## ⚔️ Menangani Konflik
+| Perintah | Keterangan |
+|---------|------------|
+| `git diff` | Tampilkan perbedaan perubahan |
+| `git merge --abort` | Batalkan proses merge |
+
+---
+
+## 🧭 Bantuan & Shortcut
+| Perintah | Keterangan |
+|---------|------------|
+| `git help <command>` | Dokumentasi perintah Git |
+| `alias graph="git log --all --decorate --oneline --graph"` | Alias untuk melihat visual commit graph |
+
+---
